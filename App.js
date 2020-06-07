@@ -30,11 +30,11 @@ class App extends Component {
   state = {
     decks: {},
   }
-  
+
   componentDidMount() {
 
     setLocalNotification();
-    
+
     const decks = getDecks().then((decks) => {
 
       this.setState((state) => {
@@ -47,7 +47,7 @@ class App extends Component {
   render() {
     const firstDeck = Object.values(this.state.decks)[0];
     const { decks } = this.state;
-    
+
     if (Object.keys(this.state.decks).length === 0) {
       return (<ActivityIndicator size="large" color="#0000ff"/> )
     }
@@ -58,12 +58,12 @@ class App extends Component {
             <Stack.Screen name="Decks" component={HomeScreenTabs} />
             <Stack.Screen name="Deck" component={DeckView} />
             <Stack.Screen name="Add Card" component={NewCard}/>
-            <Stack.Screen name="Quiz" component={Quiz} />                      
+            <Stack.Screen name="Quiz" component={Quiz} />
           </Stack.Navigator>
         </NavigationContainer>
       );
     }
-    
+
   }
 }
 

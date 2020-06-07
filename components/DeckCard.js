@@ -2,14 +2,24 @@ import React, { Component } from 'react';
 
 import PropTypes from 'prop-types';
 
-import { TouchableOpacity, StyleSheet, Text } from 'react-native';
+import { TouchableOpacity, StyleSheet, Text, Animated } from 'react-native';
 
 
 
 class DeckCard extends Component{
 
+  state = {
+    fontSize: new Animated.Value(30)
+  }
+
   handlDeckPress = (event) => {
-    this.props.onD
+    const {onClick, deck} = this.props;
+    const { fontSize } = this.state;
+
+    Animated.timing(fontSize,  {toValue: 35}).start(() => {
+      fontSize.setValue(30);
+      onClick(deck.title);
+    })
   }
 
   render() {
@@ -18,15 +28,15 @@ class DeckCard extends Component{
     const title = deck.title;
     const numberOfCards = deck.questions.length + ' cards';
     //console.log(deck);
+    const { fontSize } = this.state;
 
     return(
       <TouchableOpacity
         style={styles.deckcard}
-        onPress={() => onClick(title)}
+        onPress={this.handlDeckPress}
       >
-        <Text style={styles.header}>{title}</Text>
+        <Animated.Text style={[styles.header, { fontSize }]}>{title}</Animated.Text>
         <Text style={styles.subheader}> {numberOfCards} </Text>
-
       </TouchableOpacity>
     );
 

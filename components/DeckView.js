@@ -38,7 +38,7 @@ class DeckView extends Component {
     });
 
 
-    //because we studied, clear notification for today and set new one for tomorrow
+    //When user studies, clear notification for today and set new one for tomorrow
     clearLocalNotifications().then(setLocalNotification);
   }
 
@@ -62,22 +62,22 @@ class DeckView extends Component {
             <Text style={styles.subheader}> {numberOfCards}</Text>
           </View>
           <View id="buttons" style={styles.buttons}>
-            <Button 
-              style={styles.startButton} 
-              title={'Start Quiz'} 
+            <Button
+              style={styles.startButton}
+              title={'Start Quiz'}
               color='#eb91e8'
               onPress={() => navigation.navigate('Quiz', route.params)}
             />
-            <Button 
-              style={styles.addCardButton} 
-              title={'Add Card'} 
+            <Button
+              style={styles.addCardButton}
+              title={'Add Card'}
               color='#75EBC5'
               onPress={() => navigation.navigate('Add Card', route.params)}
             />
             <View style={styles.deleteDeckButtonContainer}>
-              <Button 
-                style={styles.deleteDeckButton} 
-                title={'Delete Deck'} 
+              <Button
+                style={styles.deleteDeckButton}
+                title={'Delete Deck'}
                 color='#ff7d7d'
                 onPress={() => {
                       deleteDeck(title).then(() =>{
