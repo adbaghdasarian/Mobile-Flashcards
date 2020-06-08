@@ -17,15 +17,15 @@ class FinishedQuiz extends Component {
         <Text style={styles.text}>
         You got {numberOfCorrect} / {numberOfCards} correct
         </Text>
-        <Button 
-            style={styles.resetButton} 
-            title={'Reset'} 
+        <Button
+            style={styles.resetButton}
+            title={'Reset'}
             color='#ff7d7d'
             onPress={reset}
         />
-        <Button 
-            style={styles.backToDeckButton} 
-            title={'Back to Deck'} 
+        <Button
+            style={styles.backToDeckButton}
+            title={'Back to Deck'}
             color='#75EBC5'
             onPress={this.props.backToDeck}
         />
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 25,
-    fontFamily: 'futura',
+    fontFamily: 'serif',
     textAlign: 'center',
     color: '#75EBC5',
   },

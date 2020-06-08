@@ -33,7 +33,7 @@ class NewDeck extends Component {
 
 
   render() {
-    
+
     return(
       <SafeAreaView style={styles.outerContainer}>
         <SafeAreaView style={styles.container}>
@@ -44,9 +44,9 @@ class NewDeck extends Component {
               onChangeText={this.handleDeckTitleInput}
               style={styles.input}
         />
-        <Button 
-            style={styles.button} 
-            title={'Add Deck'} 
+        <Button
+            style={styles.button}
+            title={'Add Deck'}
             color='#eb91e8'
             onPress={this.handleAddDeck}
         />
@@ -70,8 +70,8 @@ const styles = StyleSheet.create({
     marginTop: 70,
   },
   input: {
-     height: 40, 
-     borderColor: 'gray', 
+     height: 40,
+     borderColor: 'gray',
      borderWidth: 1,
      marginHorizontal: 2,
      width: '80%',
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   deckQuery: {
     fontSize: 27,
     textAlign: 'center',
-    fontFamily: 'Futura',
+    fontFamily: 'serif',
     color: '#75EBC5',
   }
 })

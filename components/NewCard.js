@@ -13,7 +13,7 @@ class NewCard extends Component {
     question: '',
     answer: ''
   }
-  
+
   handleQuestionInput = (text) => {
     this.setState({
       question: text
@@ -29,7 +29,7 @@ class NewCard extends Component {
     //add to Asynstorage and reroute back to deck
     const { question, answer} = this.state;
     const activeDeckTitle = route.params.activeDeck;
-    
+
 
     //saves card then cleans inputs and navigates back to deck
     saveCard(activeDeckTitle, question, answer)
@@ -38,8 +38,8 @@ class NewCard extends Component {
       navigation.navigate('Deck', route.params);
     });
 
-    
-    
+
+
   }
 
 
@@ -64,9 +64,9 @@ class NewCard extends Component {
             style={styles.input}
           />
         </View>
-        <Button 
-          style={styles.button} 
-          title={'Add Card'} 
+        <Button
+          style={styles.button}
+          title={'Add Card'}
           color='#eb91e8'
           onPress={this.handleAddCard}
         />
@@ -86,8 +86,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   input: {
-     height: 40, 
-     borderColor: 'gray', 
+     height: 40,
+     borderColor: 'gray',
      borderWidth: 1,
      marginHorizontal: 5,
   },
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   inputHeader: {
     textAlign: 'center',
     fontSize: 25,
-    fontFamily: 'Futura',
+    fontFamily: 'serif',
     marginBottom: 10,
     color: '#75EBC5'
   }

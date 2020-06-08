@@ -26,7 +26,7 @@ class QuizQuestion extends Component {
       }
     })
   }
-  
+
   render() {
     const {flashCard, cardNumber, deckLength, nextCard} = this.props;
     const { showAnswer } = this.state;
@@ -35,7 +35,7 @@ class QuizQuestion extends Component {
     return(
        <SafeAreaView style={styles.container}>
         <View id='quizCard' style={styles.quizcard}>
-          <Text style={styles.cardNumber}> 
+          <Text style={styles.cardNumber}>
             {cardNumber}/{deckLength}
           </Text>
           <Text style={styles.cardText}>
@@ -44,7 +44,7 @@ class QuizQuestion extends Component {
               questionText
             }
           </Text>
-          <TouchableOpacity 
+          <TouchableOpacity
             style={styles.toggleAnswer}
             onPress={this.handleFlip}>
             <Text style={styles.toggleAnswer}>
@@ -53,21 +53,21 @@ class QuizQuestion extends Component {
           </TouchableOpacity>
         </View>
         <View style={styles.buttons}>
-          <Button 
-              style={styles.correctButton} 
-              title={'Correct'} 
+          <Button
+              style={styles.correctButton}
+              title={'Correct'}
               color='#75EBC5'
               onPress={() => nextCard(true)}
           />
-          <Button 
-              style={styles.incorrectButton} 
-              title={'Incorrect'} 
+          <Button
+              style={styles.incorrectButton}
+              title={'Incorrect'}
               color='#ff7d7d'
               onPress={() => nextCard(false)}
           />
         </View>
        </SafeAreaView>
-      
+
     )
   }
 
@@ -84,14 +84,14 @@ const styles = StyleSheet.create({
   },
   cardText: {
     fontSize: 30,
-    fontFamily: 'futura',
+    fontFamily: 'serif',
     color: '#75EBC5',
     textAlign: 'center',
     marginTop: 10,
     marginBottom: 8,
   },
   cardNumber: {
-    fontFamily: 'futura',
+    fontFamily: 'serif',
     color: '#eb91e8',
     fontWeight: 'bold',
     fontSize: 10,
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   },
   toggleAnswer: {
     textAlign: 'center',
-    fontFamily: 'futura',
+    fontFamily: 'serif',
     color: 'grey',
     marginTop: 10,
 

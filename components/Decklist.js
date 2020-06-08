@@ -31,15 +31,15 @@ class Decklist extends Component {
     const decks = getDecks().then((decks) => {
       //console.log(decks);
       this.setState((state) => {
-        return { 
+        return {
           decks: JSON.parse(decks)
         };
       })
     });
   }
- 
+
   render(){
-  
+
     const { decks } = this.state;
     if (Object.keys(decks).length === 0) {
       return (<Text style={styles.nodecks}>There are no decks yet!</Text>)
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   },
   nodecks: {
     fontSize: 25,
-    fontfamily: 'futura',
+    fontFamily: 'serif',
 
   }
 })

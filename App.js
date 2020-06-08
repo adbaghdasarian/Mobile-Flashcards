@@ -36,7 +36,6 @@ class App extends Component {
     setLocalNotification();
 
     const decks = getDecks().then((decks) => {
-
       this.setState((state) => {
         return { decks: JSON.parse(decks) };
       })
@@ -67,39 +66,5 @@ class App extends Component {
   }
 }
 
-/*
-screenOptions={({ route }) => ({
-              tabBarIcon: ({ color, size }) => {
-                const icons = {
-                  Home: 'home',
-                  Profile: 'account',
-                };
-
-                return (
-                  <MaterialCommunityIcons
-                    name={icons[route.name]}
-                    color={color}
-                    size={size}
-                  />
-                );
-              },
-            })}
-*/
-
-/*const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    paddingTop: Constants.statusBarHeight,
-    backgroundColor: '#ecf0f1',
-    padding: 8,
-  },
-  paragraph: {
-    margin: 24,
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-});*/
 
 export default App;

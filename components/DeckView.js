@@ -107,13 +107,13 @@ const styles = StyleSheet.create({
   },
   header: {
     fontSize: 50,
-    fontFamily: 'Futura',
+    fontFamily: 'serif',
     marginBottom: 10,
     color: '#75EBC5'
   },
   subheader: {
     fontSize: 15,
-    fontFamily: 'Futura'
+    fontFamily: 'serif'
   },
    startButton: {
     height: 40,

@@ -63,7 +63,6 @@ const styles = StyleSheet.create({
   },
   header: {
     fontSize: 32,
-    //fontFamily: 'Futura',
   },
   subheader: {
     fontSize: 15,
