@@ -4,7 +4,7 @@ Udacicards is a react-native flashcards application for android and IOS.
 
 
 
-##INSTALLATION
+## INSTALLATION
 
 Clone this repo into a new folder.
 
@@ -37,7 +37,7 @@ https://citi.io/2020/01/23/simple-steps-to-get-android-emulator-on-ios/
 That's it!
 
 
-##ISSUES
+## ISSUES
 
 There is known issue using notifications in web-development mode of expo-cli. Notifications as-of-yet does not support web.
 
@@ -50,9 +50,9 @@ To run this app in web development mode, comment out all Notification handling:
 App.js line: 36
 components/DeckView.js line: 42
 
-##LAYOUT
+## LAYOUT
 
-####DECK LIST
+#### DECK LIST
 
 This is a view of all your decks.
 
@@ -60,7 +60,7 @@ Click on a deck to begin adding cards and quizzing yourself.
 
 Add new decks with the bottom tab router.
 
-####DECK VIEW
+#### DECK VIEW
 
 View for an individual deck
 
